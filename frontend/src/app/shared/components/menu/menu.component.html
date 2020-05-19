@@ -1,0 +1,44 @@
+<div [ngClass]="{ 'active-menu': isShown }">
+    <div class="menu-bar">
+        <i 
+            tabindex="0" 
+            class="fa fa-window" 
+            (keyup.space)="toggle()" 
+            (click)="toggle()">
+        </i>
+        <h5 class="ml-2">ALURAPIC</h5>
+        <hr>
+
+        <ul class="list-unstyled">
+            <li 
+                class="menu-item" 
+                (click)="toggle()" 
+                [routerLink]="['p','add']">
+                    <a>Upload</a>
+            </li>
+            <li 
+                class="menu-item"
+                (click)="toggle()" 
+                [routerLink]="['']">
+                    <a>Timeline</a>
+            </li>
+            <li 
+                class="menu-item"
+                (click)="toggle()">
+                    <a>Profile</a>
+            </li>
+            <li 
+                class="menu-item" 
+                (click)="toggle()">
+                    <a>Messages</a>
+            </li>
+            <li 
+                class="menu-item" 
+                (click)="toggle()">
+                    <a>Settings</a>
+            </li>
+        </ul>
+    
+    </div>
+    <div class="overlay" (click)="toggle()"></div>
+</div>
